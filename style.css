@@ -1,0 +1,118 @@
+body {
+  overflow-x: hidden;
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 17px;
+}
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  font-family: "Playfair Display", serif;
+}
+.logo {
+  font-weight: 700;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 290px;
+  transition: transform 0.3s ease;
+   overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  margin-top: auto;
+}
+.column {
+  margin-top: 40px;
+}
+.nav-links li {
+  transition: transform 0.3s ease;
+}
+
+.nav-links li:hover {
+  transform: translateY(-6px);
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.about {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.card-title h6{
+    font-family: 'Playfair Display', serif;
+}
+.card-text{
+     font-family: "Roboto", sans-serif;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1); 
+}
+.full-content {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.navbar, .about, .card {
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.navbar {
+  padding: 15px 40px;
+  border-radius: 0 0 20px 20px;
+}
+
+.about {
+  padding: 30px;
+  border-radius: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border-radius: 20px;
+}
